@@ -87,12 +87,12 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
+	      <id>Nexus</id>
 	      <name>Releases Nexus Repository</name>
 	      <url>http://localhost:8081/repository/Jenkins_ReleaseRepo/</url>
 	    </repository>
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>Nexus</id>
 	      <name>Snapshot Nexus Repository</name>
 	      <url>http://localhost:8081/repository/Jenkins_SnapshotRepo/</url>
 	    </snapshotRepository>
