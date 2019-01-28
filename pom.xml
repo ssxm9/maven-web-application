@@ -113,6 +113,13 @@
 			</plugin>
 		</plugins>
 	</build>
+          <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
+        <dependency>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>sonar-maven-plugin</artifactId>
+               <version>3.6.0.1398</version>
+               <type>pom</type>
+        </dependency>
 
 	
 </project>
