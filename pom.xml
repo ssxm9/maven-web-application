@@ -122,7 +122,7 @@
 			</plugin>
 			<!-- https://mvnrepository.com/artifact/org.wildfly.plugins/wildfly-maven-plugin -->
                         <!--dependency>-->
-			<plugin>
+			<!--plugin>
                                     <groupId>org.wildfly.plugins</groupId>
                                     <artifactId>wildfly-maven-plugin</artifactId>
                                     <version>2.0.0.Final</version>
