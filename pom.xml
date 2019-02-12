@@ -22,7 +22,7 @@
 		<spring.version>5.0.2.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://localhost:9000/</sonar.host.url>
+		<!--sonar.host.url>http://localhost:9000/</sonar.host.url>-->
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -82,15 +82,6 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		 
-		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
-                <!--dependency>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>3.6.0.1398</version>
-                        <type>pom</type>
-               </dependency>-->
-
 
 	</dependencies>
 	
@@ -120,22 +111,32 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-                        <!--dependency>-->
-			<plugin>
-                                    <groupId>org.wildfly.plugins</groupId>
-                                    <artifactId>wildfly-maven-plugin</artifactId>
-                                    <version>2.0.0.Final</version>
-				<configuration>
-                                       <force>true</force>
-                                       <hostname>${hostname}</hostname>
-                                       <port>9990</port>
-                                       <!--username>satyabratamishra9</username>
-                                       <password>9439792795</password>-->
-                                </configuration>
-                        <plugin>
-			<!--/dependency>-->
 		</plugins>
 	</build>
          
+	<profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>http://myserver:9000</sonar.host.url>
+            </properties>
+		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+          <build>
+           <pluginManagement>
+            <plugins>
+             <plugin>
+               <groupId>org.sonarsource.scanner.maven</groupId>
+               <artifactId>sonar-maven-plugin</artifactId>
+               <version>3.6.0.1398</version>
+             </plugin>
+            </plugins>
+           </pluginManagement>
+          </build>
+        </profile>
+     </profiles>
 	
 </project>
