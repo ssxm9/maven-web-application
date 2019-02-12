@@ -123,7 +123,7 @@
             <properties>
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
                 <sonar.host.url>http://myserver:9000</sonar.host.url>
-		<sonar-maven-plugin.version>3.6.0.1398<sonar-maven-plugin.version>
+		<sonar-maven-plugin.version>3.6.0.1398</sonar-maven-plugin.version>
             </properties>
 		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
           <build>
