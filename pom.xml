@@ -120,7 +120,7 @@
 		</plugins>
 	</build>
          
-	<profiles>
+	<!--profiles>
         <profile>
             <id>sonar</id>
             <activation>
@@ -168,6 +168,6 @@
         </plugins>
       </build>
     </profile>
-  </profiles>
+  </profiles>-->
 	
 </project>
