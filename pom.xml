@@ -85,8 +85,8 @@
 
 	</dependencies>
 	
-	<!--distributionManagement>
-	    <repository>
+	<distributionManagement>
+	    <!--repository>
 	      <id>Nexus</id>
 	      <name>Releases Nexus Repository</name>
 	      <url>http://localhost:8081/repository/Jenkins_ReleaseRepo/</url>
@@ -95,8 +95,14 @@
 	      <id>Nexus</id>
 	      <name>Snapshot Nexus Repository</name>
 	      <url>http://localhost:8081/repository/Jenkins_SnapshotRepo/</url>
-	    </snapshotRepository>
-	</distributionManagement>-->
+	    </snapshotRepository>-->
+
+           <snapshotRepository>
+             <id>snapshots</id>
+             <name>Satyabrata-snapshots</name>
+             <url>http://localhost:8085/artifactory/libs-snapshot</url>
+             </snapshotRepository>
+	</distributionManagement>
 	
 	<build>
 		<finalName>maven-web-application</finalName>
